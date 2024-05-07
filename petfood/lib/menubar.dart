@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:petfood/screens/profile/profilepage.dart';
+import 'package:petfood/screens/homepage.dart';
 
 const TextStyle _textStyle = TextStyle(
   fontSize: 40,
@@ -17,19 +19,16 @@ class MaterialYou extends StatefulWidget {
 class _MaterialYouState extends State<MaterialYou> {
   int _currentIndex = 0;
   List<Widget> pages = const [
-    Text('profile', style: _textStyle),
-    Text('video', style: _textStyle),
-    Text('home', style: _textStyle),
+    ProfilePage(),
+    Text('camera', style: _textStyle),
+    HomePage(),
     Text('sound', style: _textStyle),
     Text('food', style: _textStyle),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('PetFood'),
-      ),
-      backgroundColor: Color.fromARGB(255, 224, 171, 136),
+      backgroundColor: Color.fromARGB(255, 235, 202, 179),
       body: Center(
         child: pages[_currentIndex],
       ),
@@ -61,7 +60,7 @@ class _MaterialYouState extends State<MaterialYou> {
               backgroundColor: Color.fromARGB(255, 104, 60, 10), // Cor de fundo
               labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
               animationDuration: const Duration(milliseconds: 20),
-              height: 55,
+              height: 62,
               selectedIndex: _currentIndex,
               onDestinationSelected: (int newIndex) {
                 setState(() {

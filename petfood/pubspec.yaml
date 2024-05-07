@@ -37,6 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.6
   lottie: ^3.1.0
   flare_flutter: ^3.0.0
+  smooth_page_indicator: ^1.1.0
+  page_transition: ^2.1.0
+  intl: ^0.19.0
+  syncfusion_flutter_calendar: ^25.1.40
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
@@ -64,12 +69,24 @@ flutter:
   assets:
   - lib\assets\dogpaw.json
   - lib\assets\cat.json
+  - lib\assets\appointment.json
   - lib\assets\onBoarding\catGif.json
   - lib\assets\onBoarding\dog.json
   - lib\assets\petfoodlogo.json
   - lib\assets\googleicon.png
   - lib\assets\images\googlecon.png
-  #   - images/a_dot_ham.jpeg
+  - lib\assets\images\image_0.jpg
+  - lib\assets\images\image_1.jpg
+  - lib\assets\images\image_2.jpg
+  - lib\assets\images\image_3.jpg
+  - lib\assets\images\image_4.jpg
+  - lib\assets\images\cardimage_0.png
+  - lib\assets\images\cardimage_1.png
+  - lib\assets\images\cardimage_2.png
+  - lib\assets\images\cardimage_3.png
+  - lib\assets\login\catforgot.json
+  - lib\assets\login\dogforgot.json
+  
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

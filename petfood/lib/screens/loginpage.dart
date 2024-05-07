@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:petfood/menubar.dart';
+import 'package:petfood/screens/login/forgotpassword.dart';
+import 'package:petfood/screens/login/signup.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class SignIn extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 224, 171, 136),
       body: Container(
         color: const Color.fromARGB(255, 224, 171, 136), //Cor de fundo da tela
         child: Padding(
@@ -28,7 +30,7 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  'Sign In',
+                  'Entrar',
                   style: TextStyle(
                     fontSize: 25.0,
                     fontWeight: FontWeight.w700,
@@ -40,24 +42,22 @@ class SignIn extends StatelessWidget {
                 const TextField(
                   obscureText: false,
                   decoration: InputDecoration(
-                    hintText: 'Enter Email',
+                    hintText: 'Email',
                     hintStyle:
                         TextStyle(color: Color.fromARGB(255, 104, 60, 10)),
-                    prefixIcon: Icon(
-                      Icons.email_outlined,
-                      color: Color.fromARGB(255, 104, 60, 10)
-                    ),
+                    prefixIcon: Icon(Icons.email_outlined,
+                        color: Color.fromARGB(255, 104, 60, 10)),
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: Color.fromARGB(255, 61, 35, 6)
-                      ), // Define a cor da linha quando o TextField está em foco
+                          color: Color.fromARGB(255, 61, 35,
+                              6)), // Define a cor da linha quando o TextField está em foco
                     ),
                   ),
                 ),
                 const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    hintText: 'Enter Password',
+                    hintText: 'Senha',
                     hintStyle:
                         TextStyle(color: Color.fromARGB(255, 104, 60, 10)),
                     prefixIcon: Icon(
@@ -66,8 +66,8 @@ class SignIn extends StatelessWidget {
                     ),
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: Color.fromARGB(255, 61, 35, 6)
-                      ), // Define a cor da linha quando o TextField está em foco
+                          color: Color.fromARGB(255, 61, 35,
+                              6)), // Define a cor da linha quando o TextField está em foco
                     ),
                   ),
                 ),
@@ -76,8 +76,12 @@ class SignIn extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Navigator.pushReplacement(
-                    // );
+                    // Navegue para a HomePage substituindo a tela atual
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MaterialYou()),
+                    );
                   },
                   child: Container(
                     width: size.width,
@@ -94,7 +98,7 @@ class SignIn extends StatelessWidget {
                         horizontal: 10, vertical: 20),
                     child: const Center(
                       child: Text(
-                        'Sign In',
+                        'Entrar',
                         style: TextStyle(
                           color: Color.fromARGB(255, 104, 60, 10),
                           fontSize: 18.0,
@@ -108,20 +112,24 @@ class SignIn extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Navigator.pushReplacement(
-                    //    );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              ForgotPassword()), // Substitua ForgotPassword() pela sua tela de recuperação de senha
+                    );
                   },
                   child: Center(
                     child: const Text.rich(
                       TextSpan(children: [
                         TextSpan(
-                          text: 'Forgot Password? ',
+                          text: 'Esqueceu sua senha? ',
                           style: TextStyle(
                             color: Color.fromARGB(255, 104, 60, 10),
                           ),
                         ),
                         TextSpan(
-                          text: 'Reset Here',
+                          text: 'Clique aqui',
                           style: TextStyle(
                             color: Color.fromARGB(255, 104, 60, 10),
                           ),
@@ -135,12 +143,23 @@ class SignIn extends StatelessWidget {
                 ),
                 const Row(
                   children: [
-                    Expanded(child: Divider()),
+                    Expanded(
+                        child: Divider(
+                      color: Color.fromARGB(255, 104, 60, 10),
+                    )),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Text('OR'),
+                      child: Text(
+                        'OU',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 104, 60, 10),
+                        ),
+                      ),
                     ),
-                    Expanded(child: Divider()),
+                    Expanded(
+                        child: Divider(
+                      color: Color.fromARGB(255, 104, 60, 10),
+                    )),
                   ],
                 ),
                 const SizedBox(
@@ -163,7 +182,7 @@ class SignIn extends StatelessWidget {
                         child: Image.asset('lib/assets/googleicon.png'),
                       ),
                       const Text(
-                        'Sign In with Google',
+                        'Entrar com o Google',
                         style: TextStyle(
                           color: Color.fromARGB(255, 104, 60, 10),
                           fontSize: 18.0,
@@ -176,24 +195,25 @@ class SignIn extends StatelessWidget {
                   height: 20,
                 ),
                 GestureDetector(
-                  // onTap: () {
-                  // Navigator.pushReplacement(
-                  //  context,
-                  //  PageTransition(
-                  //     child: const SignUp(),
-                  //    type: PageTransitionType.bottomToTop));
-                  //  },
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              SignUp()), // Substitua ForgotPassword() pela sua tela de recuperação de senha
+                    );
+                  },
                   child: const Center(
                     child: Text.rich(
                       TextSpan(children: [
                         TextSpan(
-                          text: 'New user? ',
+                          text: 'Novo usuário? ',
                           style: TextStyle(
                             color: Color.fromARGB(255, 104, 60, 10),
                           ),
                         ),
                         TextSpan(
-                          text: 'Register',
+                          text: 'Registre aqui',
                           style: TextStyle(
                             color: Color.fromARGB(255, 104, 60, 10),
                           ),
