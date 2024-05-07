@@ -64,7 +64,8 @@ flutter:
   assets:
   - lib\assets\dogpaw.json
   - lib\assets\cat.json
-  - lib\assets\catGif.json
+  - lib\assets\onBoarding\catGif.json
+  - lib\assets\onBoarding\dog.json
   - lib\assets\petfoodlogo.json
   - lib\assets\googleicon.png
   - lib\assets\images\googlecon.png

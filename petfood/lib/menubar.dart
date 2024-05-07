@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/loginpage.dart';
 
 const TextStyle _textStyle = TextStyle(
   fontSize: 40,
@@ -18,7 +17,7 @@ class MaterialYou extends StatefulWidget {
 class _MaterialYouState extends State<MaterialYou> {
   int _currentIndex = 0;
   List<Widget> pages = const [
-    SignIn(),
+    Text('profile', style: _textStyle),
     Text('video', style: _textStyle),
     Text('home', style: _textStyle),
     Text('sound', style: _textStyle),

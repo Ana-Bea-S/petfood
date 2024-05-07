@@ -58,15 +58,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     'Aplicativo com sistema integrado pensado para o bem-estar do seu pet',
               ),
               createPage(
-                gif: Lottie.asset('lib/assets/catGif.json'),
+                gif: Lottie.asset('lib/assets/onBoarding/catGif.json'),
                 title: 'Funcionalidades',
                 description:
                     'Desde a alimentação automática até a comunicação por áudio',
               ),
               createPage(
-                gif: Lottie.asset('lib/assets/cat.json'),
+                gif: Lottie.asset('lib/assets/onBoarding/dog.json'),
                 title: 'Cuidados',
-                description: '',
+                description: 'Monitore e cuide de seu animalzinho a quilômetros de distância',
               ),
             ],
           ),
