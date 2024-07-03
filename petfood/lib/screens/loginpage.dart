@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:petfood/menubar.dart';
 import 'package:petfood/screens/login/forgotpassword.dart';
-import 'package:petfood/screens/login/signup.dart';
+import 'package:petfood/signup.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
