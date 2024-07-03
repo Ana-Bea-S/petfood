@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petfood/screens/profile/profilepage.dart';
 import 'package:petfood/screens/homepage.dart';
+import 'package:petfood/feedingpage.dart';
 
 const TextStyle _textStyle = TextStyle(
   fontSize: 40,
@@ -23,7 +24,7 @@ class _MaterialYouState extends State<MaterialYou> {
     Text('camera', style: _textStyle),
     HomePage(),
     Text('sound', style: _textStyle),
-    Text('food', style: _textStyle),
+    FeedingPage(),
   ];
   @override
   Widget build(BuildContext context) {
